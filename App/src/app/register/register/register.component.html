@@ -1,0 +1,61 @@
+
+<div class="signup-1 flex items-center relative h-screen">
+  <div class="overlay absolute inset-0 z-0 bg-black opacity-75"></div>
+  <div class="container px-4 mx-auto relative z-10">
+    <div class="sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-5/12 mx-auto">
+      <div class="box bg-white p-6 md:px-12 md:pt-12 border-t-10 border-solid border-indigo-600">
+		<h2 class="text-3xl text-gray-800 text-center">Register</h2>
+		<div class="text-center mt-6 md:mt-12">
+		  <div class="text-center mt-6 md:mt-12">
+			<div class="input-field col s6">
+			  <input [(ngModel)]="fname"  type="text" class="validate">
+			  <label class="active" for="first_name2">First Name</label>
+			</div>
+		  </div>
+		  <div class="text-center mt-6 md:mt-12">
+			<div class="input-field col s6">
+			  <input [(ngModel)]="lname"  type="text" class="validate">
+			  <label class="active" for="first_name2">Last Name</label>
+			</div>
+		  </div>
+		  <div class="text-center mt-6 md:mt-12">
+			<div class="input-field col s6">
+				
+			  <input [(ngModel)]="email"  type="text" class="validate">
+			  <label class="active" for="first_name2">Email</label>
+			</div>
+		  </div>
+		  <div class="text-center mt-6 md:mt-12">
+			<div class="input-field col s6">
+				
+			  <input [(ngModel)]="phone"  type="text" class="validate">
+			  <label class="active" for="first_name2">Phone</label>
+			</div>
+		  </div>
+		  <div class="text-center mt-6 md:mt-12">
+			<div class="input-field col s6">
+				
+			  <input [(ngModel)]="password"  type="password" class="validate">
+			  <label class="active" for="first_name2">Password</label>
+			</div>
+		  </div>
+		  <div class="switch">
+			<label>
+			  User
+			  <input type="checkbox" [(ngModel)]="role">
+			  <span class="lever"></span>
+			  Admin
+			</label>
+		  </div>
+		  <div class="text-center mt-6 md:mt-12">
+			<button class="bg-indigo-600 hover:bg-indigo-700 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300"(click)="register()" onclick="M.toast({html: 'Registered successfully', classes: 'rounded'})">Register<span class="far fa-paper-plane ml-2"></span></button>
+		  </div>
+		  <div class="text-center mt-6 md:mt-12">
+			<a class="bg-indigo-600 hover:bg-indigo-700 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300" onclick="M.toast({html: 'Back to Login', classes: 'rounded'})" [href]="logi" >login<span class="far fa-paper-plane ml-2"></span></a>
+
+		  </div>
+		  </div>
+	</div>
+    </div>
+  </div>
+</div> 

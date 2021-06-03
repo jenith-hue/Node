@@ -1,0 +1,10 @@
+.win{
+    width: 100%; display: table; table-layout: fixed;
+}
+#data-grid-container{
+    height: 96%;
+    overflow: auto;
+}
+#grid-footer{
+    height: 4%;
+}

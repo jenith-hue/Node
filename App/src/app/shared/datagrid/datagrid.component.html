@@ -1,0 +1,17 @@
+<div id="data-grid-container" #containerRef>
+    <table class="striped" id="tab">
+    <thead style="background-color:rgb(148, 156, 156); position: fixed;">
+      <tr class="win">
+        <th *ngFor="let column of gridobj.columns">{{column.displayName}}</th>
+      </tr>
+    </thead>
+    <tbody style="margin-top: 50px; display: block;">
+      <tr *ngFor="let row of gridData" class="win">
+        <td *ngFor="let column of gridobj.columns">{{row[column.key]}}</td>
+      </tr>
+    </tbody>
+  </table> 
+</div>
+<div id="grid-footer">
+  <span>Records : {{gridData.length}} of {{gridobj.data.length}}</span>
+</div>
