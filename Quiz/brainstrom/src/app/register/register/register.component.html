@@ -1,0 +1,28 @@
+<div class="area" >
+  <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+
+<div class="box"  >   <h1>Register</h1>
+    <input type="text" name="" placeholder="Username" [(ngModel)]="username">
+    <input type="text" name="" placeholder="First Name" [(ngModel)]="fname">
+    <input type="text" name="" placeholder="Last Name" [(ngModel)]="lname">
+    <input type="text" name="" placeholder="Mobile" [(ngModel)]="phone">
+    <input type="password" name="" placeholder="Password" [(ngModel)]="password">
+    <div class="switch">
+        <label>
+          User
+          <input type="checkbox" [(ngModel)]="role">
+          <span class="lever"></span>
+          Admin
+        </label>
+      </div>
+    <input type="submit" value="Register" (click)="register()" onclick="M.toast({html: 'Registered in Successfully', classes: 'rounded'})">
+</div> 
+
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>

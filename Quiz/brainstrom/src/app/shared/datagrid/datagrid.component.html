@@ -1,0 +1,24 @@
+<div id="data-grid-container">
+    <table class="striped" id="tab">
+    <thead style="background-color:rgb(148, 156, 156); position: fixed;">
+      <tr class="win">
+        <th *ngFor="let column of gridobj.columns">{{column.displayName}}</th>
+      </tr>
+    </thead>
+    <tbody style="margin-top: 50px; display: block;">
+      <tr *ngFor="let row of gridData" class="win">
+        <td *ngFor="let column of gridobj.columns">
+        <span *ngIf="!column.cell">
+          <span *ngIf="!column.link">{{row[column.key || '']}}</span>
+          <a *ngIf="column.link" (click)="gridLinkClick(row,column)">{{row[column.key || '']}}</a>
+        </span>
+        <span *ngIf="column.cell">
+          <span *ngIf="!column.cell(row,column).click" [innerHTML] = "column.cell(row,column).html"></span>
+          <a *ngIf="column.cell(row,column).click" (click)="gridLinkClick(row,column)" [innerHTML] = "column.cell(row,column).html"></a>
+        </span>
+         
+        </td>
+      </tr>
+    </tbody>
+  </table> 
+</div>

@@ -1,0 +1,31 @@
+<a class="waves-effect waves-light btn btnn" *ngIf="editablequiz" onclick="document.getElementById('id01').style.display='block'">Create question</a>    
+<div class="w3-container">  
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+        <div class="w3-container">
+          <div class="w3-section">
+            <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name2" type="text" class="validate" >
+                  <label class="active" for="first_name2">Quiz Name</label>
+                </div>
+                <div class="row">
+                <div class="input-field col s6">
+                    <input  id="first_name2" type="text" class="validate">
+                    <label class="active" for="first_name2">Quiz Type</label>
+                  </div>
+                </div>
+               <a  class="waves-effect waves-light btn">Create Question</a>
+              <!-- <a *ngIf="id && status!='published'" class="waves-effect waves-light btn" (click)="updatequiz()">Update question</a>
+               <a *ngIf="id &&  status!='published'" class="waves-effect waves-light btn" (click)="deletequiz()">Delete question</a>
+               <a *ngIf="id &&  status!='published'" class="waves-effect waves-light btn" (click)="publishquiz()">Publish question</a>
+               <a  class="waves-effect waves-light btn" (click)="clearForm()">Close</a>-->
+              </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+<div id="quizpage-container">
+    <app-datagrid [gridobj]="infoGridObj"></app-datagrid>
+</div>
